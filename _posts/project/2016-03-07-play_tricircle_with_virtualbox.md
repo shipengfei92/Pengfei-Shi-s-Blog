@@ -95,10 +95,4 @@ In order to make the VMs with multiple VLAN networks, then add 2 network devices
 Follow me[@fai92](https://weibo.com/shipengfei92) on Weibo :)
 
 
-
-# [{{ page.title }}][1]
-2016-03-07 By {{ site.author_info }}
-
-
-[Pengfei Shi]:    http://shipengfei92.cn  "Pengfei Shi"
 [1]:    {{ page.url}}  ({{ page.title }})
