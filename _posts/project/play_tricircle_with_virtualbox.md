@@ -61,7 +61,9 @@ virtualbox
 ```
 Then you can see the virtualbox graph interface:
 
-![virtualbox](https://github.com/shipengfei92/shipengfei92.github.io/blob/master/images/playTricircle/virtualbox.png)
+
+![virtualbox](http://img.blog.csdn.net/20160307194716807)
+
 
 ## 3 Install Virtual Machines
 
@@ -73,16 +75,18 @@ For playing Tricircle, we need to install 3 nodes for devstack.One for the Top O
 In order to make the VMs with multiple VLAN networks, then add 2 network devices for bridge use.
 
 ##### eth0
-![eth0](https://github.com/shipengfei92/shipengfei92.github.io/blob/master/images/playTricircle/eth0.png)
+
+![eth0](http://img.blog.csdn.net/20160307194804338)
+
 
 ##### eth1
 
-![eth1](https://github.com/shipengfei92/shipengfei92.github.io/blob/master/images/playTricircle/eth1.png)
+![eth1](http://img.blog.csdn.net/20160307194824651)
+
 
 ##### eth2
 
-![eth2](https://github.com/shipengfei92/shipengfei92.github.io/blob/master/images/playTricircle/eth2.png)
-
+![eth2](http://img.blog.csdn.net/20160307194606728)
 
 
 ### And more?
