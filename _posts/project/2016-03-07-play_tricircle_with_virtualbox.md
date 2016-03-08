@@ -203,12 +203,12 @@ I pasted one copy in my environments as [this](http://paste.openstack.org/show/4
 First, in the node1 install the tricircle, and then in the node2 install the tricircle.
 As the above:
 
-1 Modify the networks;
-2 Create the stack user;
-3 Install git;
-4 Download the devstack;
-5 Modify the local.conf;
-6 Install the devstack with tricircle;
+<li> Modify the networks;</li>
+<li> Create the stack user;</li>
+<li> Install git;</li>
+<li> Download the devstack;</li>
+<li> Modify the local.conf;</li>
+<li> Install the devstack with tricircle;</li>
 
 #### Verifying the tricircle
 
