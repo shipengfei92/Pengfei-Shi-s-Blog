@@ -22,9 +22,7 @@ description: The steps of playing tricircle with virtualbox.
 Follow the steps in [virtualbox downloads](https://www.virtualbox.org/wiki/Linux_Downloads)
 
 ##### First, Add the following line to your /etc/apt/sources.list:
-  
 <br>
-
 
 ```
 deb http://download.virtualbox.org/virtualbox/debian trusty contrib
@@ -32,9 +30,7 @@ deb http://download.virtualbox.org/virtualbox/debian trusty contrib
 According to your distribution, replace 'vivid' by 'utopic', 'trusty', 'raring', 'quantal', 'precise', 'lucid', 'jessie', 'wheezy', or 'squeeze'.
 
 ##### Then, add The Oracle public key for apt-secure:
-
 <br>
-
 
 ```
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
@@ -42,8 +38,6 @@ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key a
 
 ##### Next, install with apt-get method:
 <br>
-
-
 
 ```
 sudo apt-get update
