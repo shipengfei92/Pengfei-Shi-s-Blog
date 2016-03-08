@@ -201,15 +201,19 @@ It will save the outputs in the logs, you can check if it's installed correct.
 I pasted one copy in my environments as [this](http://paste.openstack.org/show/489630/).
 
 ### 4.2 Cross pods OpenStack
+
 #### Installing
+
 First, in the node1 install the tricircle, and then in the node2 install the tricircle.
 As the above:
+
 <li> Modify the networks;
 <li> Create the stack user;
 <li> Install git;
 <li> Download the devstack;
 <li> Modify the local.conf;
 <li> Install the devstack with tricircle;
+
 #### Verifying the tricircle
 Before verifying, It should create the client environment variables to import, such as :
 
