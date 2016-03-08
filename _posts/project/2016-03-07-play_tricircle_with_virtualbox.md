@@ -87,7 +87,7 @@ The eth0 is the default network with NAT methods.
 ##### eth1
 The eth1 is the VLAN external network,and using bridge method, in my environment, I attached to the eth1.
 
-#####[attention] The Promiscuous Mode must to set "Allow All".And be in use after reboot.
+##### [attention] The Promiscuous Mode must to set "Allow All".And be in use after reboot.
 
 Otherwise, The Ping test with VLAN tag from Node1 to Node2 will be blocked.
 ![eth1](http://img.blog.csdn.net/20160307194824651)
