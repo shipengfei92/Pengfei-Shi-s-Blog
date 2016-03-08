@@ -98,10 +98,178 @@ The same setting as the above, the Promiscuous Mode must be set to "Allow All". 
 
 ![eth2](http://img.blog.csdn.net/20160307194606728)
 
+
 ### 3.2 Installation the VMs
 
+#### Download a ios for installation
+
+There are many mirror sites in the world. I download a ubuntu-14.04-LTS in the [Ali-OSM](http://mirrors.aliyun.com/)(Alibaba Open Source Mirror Site). Because it's very fast in China.
+
+#### Install the Operating System
+Follow the steps while installing, because it's easy, so it will be ignored.
+After installation, you will see the console like this:
+![display](http://img.blog.csdn.net/20160308123435416)
 
 ### 3.3 Running in the backgroud
+After installation of the VMs, we can login from SSH. So we need to let's these VMs running in the background.
+And so when we close the VMs, we need to choose the option:
+
+![background](http://img.blog.csdn.net/20160308113312422)
+
+
+
+## 4 Playing tricircle with devstack
+The detailed methods can be seen in the [OpenStack/Tricircle](https://github.com/openstack/tricircle).
+### 4.1 In Top OpenStack
+
+#### Configure the network
+
+Install the openvswitch for creating bridges.
+<br>
+
+
+```
+apt-get install openvswitch-switch
+``` 
+
+#### Create the stack user
+<br>
+
+```
+adduser stack
+``` 
+Give the stack user sudo privileges:
+<br>
+
+```
+apt-get install sudo -y
+echo "stack ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+```
+#### Download the devstack
+<br>
+
+
+```
+sudo apt-get install git -y
+git clone https://git.openstack.org/openstack-dev/devstack
+cd devstack
+```
+ #### Configure the local.conf
+Change the local.conf to fit your environment.
+The example is in the Tricircle Project. such as [local.conf.sample](https://github.com/openstack/tricircle/blob/master/devstack/local.conf.sample).
+
+#### Install the devstack with Tricircle project
+<br>
+
+
+```
+./stack.sh
+```
+After installing the devstack with tricircle, the next step is verifying the installation.
+
+#### Verifying the installation
+Before verifying, It should create the client environment variables to import, such as :
+
+admin-openrc.sh
+<br>
+
+```
+export OS_PROJECT_DOMAIN_ID=default
+export OS_USER_DOMAIN_ID=default
+export OS_PROJECT_NAME=admin
+export OS_TENANT_NAME=admin
+export OS_USERNAME=admin
+export OS_PASSWORD=password #change password as you set in your own environment
+export OS_AUTH_URL=http://127.0.0.1:5000
+export OS_IDENTITY_API_VERSION=3
+#It's very important to set region name to the top openstack, because tricircle has different API urls.
+export OS_REGION_NAME=RegionOne
+```
+
+Modify the verify install scripts as your own environment.
+And run:
+<br>
+
+
+```
+cd tricircle/devstack
+chmod +x verify_top_install.sh
+./verify_top_install.sh 2>&1 | tee logs
+```
+It will save the outputs in the logs, you can check if it's installed correct.
+
+I pasted one copy in my environments as [this](http://paste.openstack.org/show/489630/).
+
+### 4.2 Cross pods OpenStack
+#### Installing
+First, in the node1 install the tricircle, and then in the node2 install the tricircle.
+As the above:
+<li> Modify the networks;
+<li> Create the stack user;
+<li> Install git;
+<li> Download the devstack;
+<li> Modify the local.conf;
+<li> Install the devstack with tricircle;
+#### Verifying the tricircle
+Before verifying, It should create the client environment variables to import, such as :
+
+admin-openrc.sh
+<br>
+
+
+```
+export OS_PROJECT_DOMAIN_ID=default
+export OS_USER_DOMAIN_ID=default
+export OS_PROJECT_NAME=admin
+export OS_TENANT_NAME=admin
+export OS_USERNAME=admin
+export OS_PASSWORD=password #change password as you set in your own environment
+export OS_AUTH_URL=http://127.0.0.1:5000
+export OS_IDENTITY_API_VERSION=3
+#It's very important to set region name to the top openstack, because tricircle has different API urls.
+export OS_REGION_NAME=RegionOne
+```
+
+Modify the verify install scripts as your own environment.
+And run:
+<br>
+
+
+```
+cd tricircle/devstack
+chmod +x verify_top_install.sh
+./verify_cross_pod_install.sh 2>&1 | tee logs
+```
+
+One copy logs like [this](http://paste.openstack.org/show/489631/).
+
+#### Ping test
+Using the VNC to login the instances in Node1 and Node2.
+And Ping with each other.
+
+VM1: IP 10.0.1.3/24
+<br>
+
+
+
+```
+ping -c 4 10.0.2.3
+```
+
+![vm1](http://img.blog.csdn.net/20160308143200217)
+
+VM2: IP 10.0.2.3/24
+<br>
+
+
+
+```
+ping -c 4 10.0.1.3
+```
+![vm2](http://img.blog.csdn.net/20160308143217405)
+
+
+So the cross pod networking has been verified.
 
 
 
