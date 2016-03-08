@@ -212,10 +212,7 @@ As the above:
 
 #### Verifying the tricircle
 
-Before verifying, It should create the client environment variables to import, such as :
-
-admin-openrc.sh
-
+Before verifying, It should create the client environment variables to import, such as :admin-openrc.sh
 <br>
 
 ```
@@ -233,7 +230,6 @@ export OS_REGION_NAME=RegionOne
 
 Modify the verify install scripts as your own environment.
 And run:
-
 <br>
 
 ```
