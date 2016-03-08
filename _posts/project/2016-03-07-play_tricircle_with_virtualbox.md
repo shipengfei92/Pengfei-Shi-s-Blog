@@ -25,6 +25,7 @@ Follow the steps in [virtualbox downloads](https://www.virtualbox.org/wiki/Linux
   
 <br>
 
+
 ```
 deb http://download.virtualbox.org/virtualbox/debian trusty contrib
 ```
@@ -32,7 +33,10 @@ According to your distribution, replace 'vivid' by 'utopic', 'trusty', 'raring',
 
 ##### Then, add The Oracle public key for apt-secure:
 
+<<<<<<< HEAD
 <br>
+=======
+>>>>>>> 2bc3e0b41f40828a665636dcfddf51bb2dc441b3
 
 ```
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
@@ -40,6 +44,7 @@ wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key a
 
 ##### Next, install with apt-get method:
 <br>
+
 
 
 ```
@@ -58,12 +63,14 @@ sudo apt-get install virtualbox-5.0
 <br>
 
 
+
 ```
 ssh -X root@HostIP
 ```
 
 ##### Next, input the virtualbox to start install virtual machine
 <br>
+
 
 
 ```
