@@ -33,10 +33,8 @@ According to your distribution, replace 'vivid' by 'utopic', 'trusty', 'raring',
 
 ##### Then, add The Oracle public key for apt-secure:
 
-<<<<<<< HEAD
 <br>
-=======
->>>>>>> 2bc3e0b41f40828a665636dcfddf51bb2dc441b3
+
 
 ```
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
@@ -62,16 +60,12 @@ sudo apt-get install virtualbox-5.0
 ##### Then, connect with -X command
 <br>
 
-
-
 ```
 ssh -X root@HostIP
 ```
 
 ##### Next, input the virtualbox to start install virtual machine
 <br>
-
-
 
 ```
 virtualbox
