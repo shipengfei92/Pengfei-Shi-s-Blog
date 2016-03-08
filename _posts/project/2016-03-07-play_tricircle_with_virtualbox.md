@@ -215,9 +215,11 @@ As the above:
 <li> Install the devstack with tricircle;
 
 #### Verifying the tricircle
+
 Before verifying, It should create the client environment variables to import, such as :
 
 admin-openrc.sh
+
 <br>
 
 
@@ -236,6 +238,7 @@ export OS_REGION_NAME=RegionOne
 
 Modify the verify install scripts as your own environment.
 And run:
+
 <br>
 
 
@@ -248,12 +251,12 @@ chmod +x verify_top_install.sh
 One copy logs like [this](http://paste.openstack.org/show/489631/).
 
 #### Ping test
+
 Using the VNC to login the instances in Node1 and Node2.
 And Ping with each other.
 
 VM1: IP 10.0.1.3/24
 <br>
-
 
 
 ```
@@ -270,6 +273,7 @@ VM2: IP 10.0.2.3/24
 ```
 ping -c 4 10.0.1.3
 ```
+
 ![vm2](http://img.blog.csdn.net/20160308143217405)
 
 
