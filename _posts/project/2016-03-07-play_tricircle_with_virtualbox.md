@@ -200,8 +200,8 @@ I pasted one copy in my environments as [this](http://paste.openstack.org/show/4
 
 #### Installing
 
-First, in the node1 install the tricircle, and then in the node2 install the tricircle.
-As the above:
+First, in the node1 install the tricircle, and then in the node2 install the tricircle.As the above:
+<br>
 
 <li> Modify the networks;</li>
 <li> Create the stack user;</li>
@@ -209,6 +209,7 @@ As the above:
 <li> Download the devstack;</li>
 <li> Modify the local.conf;</li>
 <li> Install the devstack with tricircle;</li>
+<br>
 
 #### Verifying the tricircle
 
