@@ -5,7 +5,7 @@ pygments: true
 paginate: 8
 permalink: /:title
 
-title: 时鹏飞的个人主页
+title: Pengfei Shi's Home Page
 url: http://shipengfei92.cn
 feed: /atom.xml
 author_info: <a href="http://shipengfei92.cn/">Pengfei Shi</a>
