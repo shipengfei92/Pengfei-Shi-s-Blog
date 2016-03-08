@@ -127,7 +127,6 @@ The detailed methods can be seen in the [OpenStack/Tricircle](https://github.com
 Install the openvswitch for creating bridges.
 <br>
 
-
 ```
 apt-get install openvswitch-switch
 ``` 
@@ -148,7 +147,6 @@ echo "stack ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 #### Download the devstack
 <br>
 
-
 ```
 sudo apt-get install git -y
 git clone https://git.openstack.org/openstack-dev/devstack
@@ -160,7 +158,6 @@ The example is in the Tricircle Project. such as [local.conf.sample](https://git
 
 #### Install the devstack with Tricircle project
 <br>
-
 
 ```
 ./stack.sh
@@ -189,7 +186,6 @@ export OS_REGION_NAME=RegionOne
 Modify the verify install scripts as your own environment.
 And run:
 <br>
-
 
 ```
 cd tricircle/devstack
@@ -222,7 +218,6 @@ admin-openrc.sh
 
 <br>
 
-
 ```
 export OS_PROJECT_DOMAIN_ID=default
 export OS_USER_DOMAIN_ID=default
@@ -241,7 +236,6 @@ And run:
 
 <br>
 
-
 ```
 cd tricircle/devstack
 chmod +x verify_top_install.sh
@@ -258,7 +252,6 @@ And Ping with each other.
 VM1: IP 10.0.1.3/24
 <br>
 
-
 ```
 ping -c 4 10.0.2.3
 ```
@@ -267,8 +260,6 @@ ping -c 4 10.0.2.3
 
 VM2: IP 10.0.2.3/24
 <br>
-
-
 
 ```
 ping -c 4 10.0.1.3
