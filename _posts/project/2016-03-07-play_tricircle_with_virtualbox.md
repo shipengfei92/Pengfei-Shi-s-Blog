@@ -195,7 +195,7 @@ chmod +x verify_top_install.sh
 ```
 It will save the outputs in the logs, you can check if it's installed correct.
 
-I pasted one copy in my environments as [this](http://paste.openstack.org/show/489630/).
+I pasted one copy in my environments as [this](https://docs.google.com/document/d/1NQvRJo5bnnvYMUCLar-rRRm65KHOMmNpZasQlZCBgXs/edit?usp=sharing).
 
 ### 4.2 Cross pods OpenStack
 
@@ -240,7 +240,7 @@ chmod +x verify_top_install.sh
 ./verify_cross_pod_install.sh 2>&1 | tee logs
 ```
 
-One copy logs like [this](http://paste.openstack.org/show/489631/).
+One copy logs like [this](https://docs.google.com/document/d/1srGuk2XY8VIbmhGKEVBVbQ_MW5sUByGBDZcJVVS_2Cg/edit?usp=sharing).
 
 #### Ping test
 
