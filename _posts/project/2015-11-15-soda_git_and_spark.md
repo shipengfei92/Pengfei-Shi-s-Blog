@@ -1,9 +1,8 @@
 ---
 layout: post
-title: Playing Tricircle with Virtualbox
+title: SODA比赛之Gitlab和Spark
 category: project
-Description: The steps of playing tricircle with virtualbox.
-
+Description: 本文介绍了SODA比赛中Gitlab和Spark是如何提供服务的。
 ---
 
 
